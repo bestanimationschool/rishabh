@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cafe Template</title>
+<style>
+@font-face {
+    font-family: 'fertigo_proregular';
+    src: url('fonts/fertigo_pro-webfont.woff2') format('woff2'),
+         url('fonts/fertigo_pro-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html, body{
+	position:absolute;
+	min-width:100%;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+.container{
+	width:100%;
+	height:auto;
+	background-image:url(images/body-base.jpg);
+	background-repeat:repeat-x;
+	background-color:#a2745a;
+}
+.nav{
+	width:960px;
+	height:148px;
+	margin:auto;
+	display:flex;
+	padding:10px 0;
+}
+.delivery{
+	width:320px;
+	height:auto;
+	float:left;	
+	align-self:center;
+}
+.delivery h2{
+	font-family: 'fertigo_proregular';
+	font-size:25px;
+	color:#a2745a;
+	font-weight:normal;
+}
+.delivery h1{
+	font-family: 'fertigo_proregular';
+	font-size:35px;
+	color:#ffd7c1;
+	font-weight:normal;
+}
+.logo{
+	width:320px;
+	height:auto;
+	float:left;
+	text-align:center;
+}
+.search{
+	width:250px;
+	height:auto;
+	float:left;
+	margin:0 0 0 70px;
+	align-self:center;
+}
+.search p{
+	font-family:Georgia;
+	font-size:13px;
+	color:#e3bba5;
+	margin:0 0 7px 0;
+}
+.search p a{
+	font-family:Georgia;
+	font-size:13px;
+	color:#e3bba5;
+	text-decoration:none;
+}
+.search p a:hover{
+	text-decoration:underline;
+}
+.search form input{
+	width:250px;
+	height:36px;
+	font-family:Georgia;
+	font-size:13px;
+	color:#a2745a;
+	outline:none;
+	border:1px solid #7c5542;
+	border-radius:10px;
+	padding:0 0 0 10px;
+	background:url(images/search-symbol.png) no-repeat 95% center, rgba(0,0,0,0.65);
+}
+.container2{
+	width:1037px;
+	height:auto;
+	margin:20px auto 0 auto;
+	background:url(images/outer-body-texture.png) no-repeat center bottom;
+}
+.navContainer{
+	width:960px;
+	height:103px;
+	margin:auto;
+	background:url(images/navbar-arc.png) no-repeat;
+	padding:37px 0 0 0;
+}
+.navbar{
+	width:934px;
+	height:48px;
+	margin:auto;
+	background:url(images/navbar-base.jpg) no-repeat center;
+	border-top: 2px dotted #513a2d;
+	border-bottom: 2px dotted #513a2d;
+}
+.navbar ul{
+	text-align:center;
+	margin:14px 0 0 0;
+}
+.navbar ul li{
+	list-style-type:none;
+	display:inline;
+	font-family: 'fertigo_proregular';
+	font-size:14px;
+	color:#513a2d;
+	margin:0 8px;
+}
+.navbar ul li a{
+	font-family: 'fertigo_proregular';
+	font-size:14px;
+	color:#513a2d;
+	text-decoration:none;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+.navbar ul li a:hover, .navbar ul li a.active{
+	color:#af182a;
+}
+.bodyContainer{
+	width:960px;
+	height:auto;
+	margin:auto;
+	background:url(images/inner-body-base.jpg) no-repeat;
+}
+.bodyContainer1{
+	width:928px;
+	height:auto;
+	margin:auto;
+	border-top: 2px dotted #513a2d;
+	border-right: 2px dotted #513a2d;
+	border-left: 2px dotted #513a2d;
+}
+.banner{
+	width:888px;
+	height:359px;
+	margin:23px auto 0 auto;
+	background:url(images/tea-cup.png) no-repeat 97% 90%, url(images/lemon.png) no-repeat 55%, url(images/banner-base.png) no-repeat;
+}
+.banner p{
+	font-family: 'fertigo_proregular';
+	font-size:60px;
+	color:#b88c00;
+	font-weight:normal;
+	text-align:center;
+	display:inline-block;
+	margin:76px 0 0 29px;
+}
+.banner button{
+	font-family: 'fertigo_proregular';
+	font-size:25px;
+	color:#3c2219;
+	font-weight:normal;
+	padding:12px 21px;
+	background:#fff;
+	border-radius:15px;
+	border:none;
+	cursor:pointer;
+	transition:all 0.5s;
+	display:block;
+	margin:0 0 0 90px;
+}
+.banner button:hover{
+	color:#af182a;
+	background:#fff;
+}
+.textContainer{
+	width:888px;
+	height:296px;
+	margin:20px auto 0 auto;
+	text-align:center;
+}
+.textContainer h1{
+	font-family: 'fertigo_proregular';
+	font-size:35px;
+	color:#af182a;
+	font-weight:normal;
+	text-transform:uppercase;
+	margin:5px 0 0 0;
+}
+.textContainer img{
+	margin:10px 0;
+}
+.textContainer p{
+	font-family: Georgia;
+	font-size:13px;
+	color:#513a2d;
+	display:block;
+	text-align:left;
+	margin:0 0 0 25px;
+}
+.dailyMenu{
+	width:282px;
+	height:296px;
+	float:left;
+	background:url(images/daily-menu-arc.jpg) no-repeat bottom, #f7ba05;
+}
+.specials{
+	width:282px;
+	height:296px;
+	float:left;
+	background:url(images/specials-arc.jpg) no-repeat bottom,#e35948;
+	margin:0 21px;
+}
+.catering{
+	width:282px;
+	height:296px;
+	float:left;
+	background:url(images/catering-arc.jpg) no-repeat bottom,#98c618;
+}
+.menu{
+	width:888px;
+	height:277px;
+	margin:48px auto 0 auto;
+	background:#f4e5dc;
+}
+.menu h3{
+	font-family: 'fertigo_proregular';
+	font-size:20px;
+	color:#af182a;
+	font-weight:normal;
+	text-transform:uppercase;
+	margin:0 0 20px 0;
+}
+.menu ul{
+	float:left;
+	margin:0 20px 0 0;
+}
+.menu ul li{
+	list-style-type:none;
+	font-family: Georgia;
+	font-size:13px;
+	color:#513a2d;
+	line-height:20px;
+}
+.menu p{
+	font-family: Georgia;
+	font-size:13px;
+	color:#513a2d;
+	line-height:20px;
+	font-style:italic;
+}
+.menu p span{
+	font-weight:bold;
+}
+.menu p a{
+	color:#af182a;
+	font-weight:bold;
+	text-decoration:none;
+}
+.menu p a:hover{
+	text-decoration:underline;
+}
+.menuItems{
+	width:282px;
+	height:277px;
+	float:left;
+	padding:18px 0 0 29px;
+}
+.foodVideos{
+	width:282px;
+	height:277px;
+	float:left;
+	margin:0 21px;
+	padding:18px 0 0 0;
+}
+.testimonials{
+	width:282px;
+	height:277px;
+	float:left;
+	padding:18px 0 0 0;
+}
+.socialMedia{
+	width:100%;
+	height:auto;
+	background:url(images/social-media-texture.png) no-repeat center top;
+	padding:55px 0 27px 0;
+}
+.socialMedia hr{
+	border-top: 2px dotted #513a2d;
+	border-right: none;
+	border-bottom: none;
+	border-left: none;
+	display:inline-block;
+	width:34.8%;	
+}
+.footer{
+	width:888px;
+	height:auto;
+	background:url(images/footer-texture.png) no-repeat center bottom, #a2745a;
+	margin:auto;
+	text-align:center;
+	padding:15px 0;
+}
+.footer ul{
+	margin:15px 0;
+}
+.footer ul li{
+	list-style-type:none;
+	display:inline;
+	font-family: Georgia;
+	font-size:12px;
+	color:#e2baa4;
+	margin:0 8px;
+}
+.footer ul li a{
+	color:#e2baa4;
+	text-decoration:none;
+}
+.footer ul li a:hover{
+	text-decoration:underline;
+}
+.footer p{
+	font-family: Georgia;
+	font-size:12px;
+	color:#e2baa4;
+}
+.footer p a{
+	color:#f4e5dc;
+	text-decoration:none;
+}
+.footer p a:hover{
+	text-decoration:underline;
+}
+</style>
+</head>
+<body>
+<div class="container">
+	<div class="nav">
+		<div class="delivery">
+			<h2>Home Delivery</h2>
+			<h1>123-456-7890</h1>
+		</div>
+		<div class="logo"><img src="images/logo.png" alt=""></div>
+		<div class="search">
+			<p><a href="#">FAQ</a> | <a href="#">Directions</a> | <a href="#">Help</a></p>
+			<form>
+				<input type="search" name="search" placeholder="search">
+			</form>
+		</div>
+	</div>
+	<div class="container2">
+		<div class="navContainer">
+			<div class="navbar">
+				<ul>
+				<li><a href="#" class="active">Home</a></li>
+				<li>&bullet;</li>
+				<li><a href="#">About Us</a></li>
+				<li>&bullet;</li>
+				<li><a href="#">Menu</a></li>
+				<li>&bullet;</li>
+				<li><a href="#">Dinner</a></li>
+				<li>&bullet;</li>
+				<li><a href="#">Lunch</a></li>
+				<li>&bullet;</li>
+				<li><a href="#">Specials</a></li>
+				<li>&bullet;</li>
+				<li><a href="#">Party</a></li>
+				<li>&bullet;</li>
+				<li><a href="#">Catering</a></li>
+				<li>&bullet;</li>
+				<li><a href="#">Contact Us</a></li>
+				</ul>
+			</div>	
+		</div>
+		<div class="bodyContainer">
+			<div class="bodyContainer1">
+				<div class="banner">
+					<p>Cafe &amp;<br>Restaurant</p>
+					<button>Order Now</button>
+				</div>
+				<div class="textContainer">
+					<div class="dailyMenu">
+						<h1>daily menu</h1>
+						<img src="images/daily-menu.png" alt="">
+						<p>Agedame tuna roll<br><br>Maki de atún crujiente, servido sobre<br>chips de tempura, salsa dinamita y<br>salsa ponzu.</p>
+					</div>
+					<div class="specials">
+						<h1>specials</h1>
+						<img src="images/specials.png" alt="">
+						<p>Agedame tuna roll<br><br>Maki de atún crujiente, servido sobre<br>chips de tempura, salsa dinamita y<br>salsa ponzu.</p>
+					</div>
+					<div class="catering">
+						<h1>catering</h1>
+						<img src="images/catering.png" alt="">
+						<p>Agedame tuna roll<br><br>Maki de atún crujiente, servido sobre<br>chips de tempura, salsa dinamita y<br>salsa ponzu.</p>
+					</div>
+				</div>
+				<div class="menu">
+					<div class="menuItems">
+						<h3><img src="images/menu-items.png" alt=""> menu items</h3>
+						<ul>						
+							<li>Appetizers</li>
+							<li>Hot tapas</li>
+							<li>Soups and Salads</li>
+							<li>Accompaniments</li>
+							<li>Vegetarian Dish</li>
+							<li>Chicken Dish</li>
+							<li>Seafood Dish</li>
+							<li>Vegetarian Sauce</li>
+							<li>Red Sauce</li>
+						</ul>
+						<ul>						
+							<li>Appetizers</li>
+							<li>Seafood Dish</li>
+							<li>Vegetarian Sauce</li>
+							<li>Red Sauce</li>
+							<li>Seafood Sauce</li>
+							<li>Desserts</li>
+							<li>Seafood Dish</li>
+							<li>Vegetarian Sauce</li>
+							<li>Red Sauce</li>
+						</ul>
+					</div>
+					<div class="foodVideos">
+						<h3><img src="images/food-videos.png" alt=""> food videos</h3>
+						<img src="images/video-thumbnail.jpg" alt="">
+						<p><a href="#">See More Videos &gt;</a></p>
+					</div>
+					<div class="testimonials">
+						<h3><img src="images/testimonials.png" alt=""> testimonials</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam quam justo, interdum vitae fermentum nec, volutpat ac massa. Cras posuere massa in diam euismod pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br><br><span>Rafi, GraphicsFuel.com</span></p>
+					</div>
+				</div>
+				<div class="socialMedia">
+					<hr>
+					<img src="images/left-design.png" alt="">
+					<a href="#"><img src="images/twitter.png" alt=""></a>
+					<a href="#"><img src="images/facebook.png" alt=""></a>
+					<a href="#"><img src="images/linkedin.png" alt=""></a>
+					<a href="#"><img src="images/email.png" alt=""></a>
+					<img src="images/right-design.png" alt="">
+					<hr>
+				</div>
+				<div class="footer">
+					<ul>
+						<li><a href="#" class="active">Home</a></li>
+						<li>&bullet;</li>
+						<li><a href="#">About Us</a></li>
+						<li>&bullet;</li>
+						<li><a href="#">Menu</a></li>
+						<li>&bullet;</li>
+						<li><a href="#">Dinner</a></li>
+						<li>&bullet;</li>
+						<li><a href="#">Lunch</a></li>
+						<li>&bullet;</li>
+						<li><a href="#">Specials</a></li>
+						<li>&bullet;</li>
+						<li><a href="#">Party</a></li>
+						<li>&bullet;</li>
+						<li><a href="#">Catering</a></li>
+						<li>&bullet;</li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+					<p>Copyright &copy; 2011 <a href="#">Cafe&Restaurant.com</a>. All Rights Reserved. Site Designed by <a href="#">GraphicsFuel.com</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
